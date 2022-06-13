@@ -34,13 +34,16 @@
 
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
-def one(input1, input2):
-	return ""
-	
 
+def one(string1, string2):
+	if len(string1) > len(string2):
+		return string1
+	elif len(string1) < len(string2):
+		return string2
+	else:
+		return f'{string1} {string2}'
 
-
-
+# Not working
 
 	# <QUESTION 2>
 
@@ -64,7 +67,7 @@ def one(input1, input2):
 	
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
-def two(input):
+def two(bert):
 	return ""
 
 
@@ -89,8 +92,16 @@ def two(input):
 
 	# No Hints for this question
 
-def three(arg1):
-	return ""
+
+def three(x):
+	if (x % 3) == 0 and (x % 5) != 0:
+		return "fizz"
+	elif (x % 5) == 0 and (x % 3) != 0:
+		return "buzz"
+	elif (x % 3) == 0 and (x % 5) == 0:
+		return "fizzbuzz"
+	else:
+		return "null"
 
 
 	# <QUESTION 4>
@@ -186,8 +197,13 @@ def six(input):
 #def isVowel(ch): 
 #    return ch.upper() in ['A', 'E', 'I', 'O', 'U'] 
 
-def seven(input): 
-	pass
+def seven(word): 
+	number_of_vowels = 0
+	the_vowels = ["a", "e", "i", "o", "u"]
+	for letter in word.lower():
+		if letter in the_vowels:
+			number_of_vowels += 1
+	return number_of_vowels
    
 
 	# <QUESTION 8>
@@ -205,8 +221,10 @@ def seven(input):
 
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
-def eight(input):
-	return ""
+def eight(x):
+	if x == 0:
+		return 1
+	return x * eight(x - 1)
 	
 
 	# <QUESTION 9>
